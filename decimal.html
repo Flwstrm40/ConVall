@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Decimal Converter</title>
+  <!-- Menggunakan tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" type="text/css" href="css/style.css" />
+  <script src="script/scriptDec.js"></script>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" />
+</head>
+
+<body>
+  <!-- Header -->
+  <header class="pt-2 bg-zinc-800 py-4">
+    <nav class="flex flex-col lg:flex-row items-center justify-between px-4 lg:px-7 mt-2">
+      <h2 class="text-slate-400 font-semibold text-2xl md:text-3xl lg:text-4xl mb-2 md:mb-0">
+        ConVall
+      </h2>
+      <ul
+        class="flex space-x-2 mt-4 lg:mt-0 items-center lg:flex lg:space-x-12 lg:flex-row lg:justify-end lg:items-center"
+        id="menuItems">
+        <a class="menu tekan" href="binary.html">Binary</a>
+        <a class="menu active" href="#">Decimal</a>
+        <a class="menu tekan" href="hexadecimal.html">Hexadecimal</a>
+        <a class="menu tekan" href="octal.html">Octal</a>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Main body -->
+  <div class="flex justify-center items-center min-h-screen">
+    <div
+      class="container md:w-[500px] lg:w-[700px] min-h-fit mx-auto my-20 p-12 bg-[#78B5B8] rounded-lg shadow-lg relative">
+      <h3 class="text-2xl font-semibold mb-6 text-center">
+        Decimal Converter
+      </h3>
+      <div class="text-left space-y-4">
+        <div class="mt-8">
+          <label for="input" class="text-left" id="inputLabel">Decimal Number</label><br />
+          <input type="text" id="input" name="input" class="mt-1 rounded-md w-full h-10 pr-2 pl-2" required />
+        </div>
+        <p id="error-message" class="text-red-500 text-xs absolute top-[165px]"></p>
+        <div class="flex items-center mt-10">
+          <p class="mt-8 mr-10 inline mb-4">Convert to</p>
+          <div class="mt-2 flex-cols space-y-2" style="color: black">
+            <button id="btn-binary"
+              class="bg-white px-4 py-2 rounded-md mx-4 hover:bg-[#2B2B2B] hover:text-white active:bg-[#484848]">
+              Binary
+            </button>
+            <button id="btn-hexadecimal"
+              class="bg-white px-4 py-2 rounded-md mx-4 hover:bg-[#2B2B2B] hover:text-white active:bg-[#484848]">
+              Hexadecimal
+            </button>
+            <button id="btn-octal"
+              class="bg-white px-4 py-2 rounded-md mx-4 hover:bg-[#2B2B2B] hover:text-white active:bg-[#484848]">
+              Octal
+            </button>
+          </div>
+        </div>
+
+        <div class="mt-8">
+          <label for="result" class="text-left" id="resultLabel">Result</label><br />
+          <input type="text" id="result" name="result" class="mt-1 rounded-md w-full h-10 pr-2 pl-2"
+            style="background-color: #2b2b2b; color: white" disabled />
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
